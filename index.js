@@ -61,8 +61,8 @@ if (num7 > num8 || num7 % num8) {
 
 //Q.6 তুমি কি একটা শর্ত পালন করলে একটা কিছু করবে। শর্ত পূরণ না করলে অন্য কিছু একটা করবে এমন কোড লিখতে পারবে। অর্থাৎ তুমি কি if-else এর কোড লিখতে পারবে। পারলে একটা কোড লিখে ফেলো 
 
-if( 7 > 6) {
-console.log('6 theke 7 boro');
+if (7 > 6) {
+    console.log('6 theke 7 boro');
 } else {
     console.log('soman');
 }
@@ -74,10 +74,55 @@ console.log('6 theke 7 boro');
 // console.log(i);
 // }
 
-let i = 7
+let i = 7;
 
-while( i < 19 &&  i % 2 !==0) {
-  
-    i++
-    console.log(i);
+while (i < 19) {
+    if (i % 2 != 0) {
+        console.log('7-19 porjnto odd number', i);
     }
+    i++
+
+}
+
+//Q.8 তোমাকে যদি বলা হয় তুমি একটা array ডিক্লেয়ার করবে। এবং সেটার মধ্যে কয়টা উপাদান আছে সেটা বের করবে হবে। সেই array এর এর মধ্যে চতুর্থ পজিশন এর উপাদান চেইঞ্জ করতে হবে। array এর মধ্যে দুইটা উপাদান যোগ করতে হবে। এবং একটা উপাদান কে বের করে দিতে হবে। তুমি কি সেটা করতে পারবে। 
+
+var student = ['Habib', 'Kamrul', 'Farjad', 'Nahid', '202', '203'];
+console.log('Total element', student.length);
+
+student[3] = 'Rima';
+console.log('4 number position change', student[3]);
+
+student.unshift('1', '2')
+console.log(student);
+
+student.shift();
+console.log(student);
+
+student.pop();
+console.log(student);
+
+//Q.9 তুমি কি একটা ফর লুপ দিয়ে কোন একটা array এর সবগুলা উপাদানকে দেখাতে পারবে। সেটা রেগুলার for লুপ হোক বা for of হোক। হলে সেই স্টাইলে একটা কোড লিখে ফেলো। 
+let workers = ['Habib', 'Kamrul', 'Farjad', 'Nahid', '202', '203'];
+for (var j = 0; j < workers.length; j++) {
+    let worker = workers[j];
+    console.log('array er sobgular upadan', worker);
+}
+
+// for(worker of workers) {
+// console.log('array er sobgular upadan',worker);
+// }
+
+//Q.10 তোমাকে যদি বলা হয়। একটা array এর মধ্যে ৮০ এর চাইতে বড় সংখ্যা থাকলে সেগুলাকে console log করে দেখাতে সেটা কি তুমি পারবে? তাহলে তুমি সেই কোড করে ফেলো 
+
+// const numbers = [50, 60, 100, 10, 80, 90];
+// for (let k = 0; k < numbers.length; k++) {
+//     if (numbers[k] > 80) {
+//         console.log('80 theke boro', numbers[k]);
+//     }
+// }
+
+const numbers = [75, 80, 85, 90, 95];
+
+const greaterThan80 = numbers.filter(number => number > 80);
+
+console.log(greaterThan80); // [85, 90, 95]
