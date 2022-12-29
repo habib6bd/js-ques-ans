@@ -128,11 +128,11 @@ const greaterThan80 = numbers.filter(number => number > 80);
 console.log(greaterThan80); // [85, 90, 95]
 
 //Q.11 তিনটা সংখ্যার গুনফল বের করে ফাইনাল রেজাল্ট আউটপুট হিসেবে রিটার্ন করতে হবে। তুমি কি সেই কোড লিখতে পারবে। যদি পারো তাহলে সেই কোড লিখে ফেলো। 
-const multiplyr =(num9, num10, num11)=> {
-let result = num9*num10*num11;
-return result;
+const multiplyr = (num9, num10, num11) => {
+    let result = num9 * num10 * num11;
+    return result;
 }
-console.log('result',multiplyr(10,11,12));
+console.log('result', multiplyr(10, 11, 12));
 
 //Q.12 একটা অবজেক্ট ডিক্লেয়ার করবে। সেটাতে তিনটা প্রপার্টি থাকবে। এবং কোন একটা প্রোপার্টি এর মান চেইঞ্জ করবা। 
 let userInfo = {
@@ -142,9 +142,45 @@ let userInfo = {
 }
 
 userInfo.name = 'Nahid',
-console.log(userInfo);
-
-
+    console.log(userInfo);
 
 
 //উপরের ১২টা কাজের মধ্যে তুমি যদি ৯টা থেকে ১০ টা বা তার বেশি কাজ করে ফেলতে পারো। তাহলে তোমার বেসিক কনসেপ্ট ঠিক আছে। যদি ৫টা থেকে ৯টা অর্থাৎ ৫ টা, ৬টা, ৭টা বা ৮টা করতে পারো। তাহলে তোমাকে হার্ডওয়ার্ক করতে হবে। একটু বেশি সময় দিতে হবে। আর তুমি যদি ৫টা এর কম। অর্থাৎ ০, বা ১টা বা ২টা বা ৩টা বা ৪টা পেয়ে থাকো তাহলে তোমাকে ডিফারেন্টভাবে জাভাস্ক্রিপ্ট এ আরো সময় দিতে হবে।
+
+//ES6
+//Q.1 সিম্পল একটা ফাংশন লিখতে হবে। যেটার নাম হবে feetToInch এবং এই ফাংশন ইনপুট হিসেবে নিবে feet আর রিটার্ন করবে inch । অর্থাৎ এই ফাংশনকে কোন একটা ফিট বলে দিলে সে রিটার্ন হিসেবে বলে দিবে কত ইঞ্চি হয়।
+const feetToInch = (feet) => {
+    return 12 * feet;
+}
+console.log('feet to inch result', feetToInch(12));
+
+//Q.2 একদম ফাংশন এর নাম হুবহু centimeterToMeter নাম দিয়ে একটা ফাংশন লিখবে। এই ফাংশনে ইনপুট হিসাবে কেউ সেন্টিমিটার দিবে আর সেই সেন্টিমিটার কে মিটার এ কনভার্ট করে রেজাল্ট রিটার্ন করবে। 
+
+const centimeterToMeter = (centemeter) => {
+    return centemeter / 100;
+}
+console.log('centimeterToMeter result', centimeterToMeter(100));
+
+//Q.3 আরেকটা ফাংশন লিখবে যেটার নাম লিখবে। যেই ফাংশনের নাম হবে paperRequirements এই ফাংশনের প্যারামিটার হিসেবে তিনটা প্যারামিটার হবে। প্রথম প্যারামিটার হবে তুমি প্রথম বই কত কপি ছাপাতে চাও। সেকেন্ড প্যারামিটার হবে তুমি সেকেন্ড বই কত কপি ছাপাতে চাও। আর থার্ড প্যারামিটার হবে তুমি থার্ড বই কত কপি ছাপাতে চাও। অর্থাৎ কোন বই এর কত কপি ছাপানো হবে সেটাই প্যারামিটার হিসেবে নিবে। এইবার ভালো করে খেয়াল করো। প্রথম বই ছাপানোর জন্য পৃষ্ঠা লাগবে ১০০ টা সেকেন্ড বই ছাপানোর জন্য পৃষ্ঠা লাগবে ২০০ টা তৃতীয় বই ছাপানোর জন্য পৃষ্ঠা লাগবে ৩০০ টা ।
+
+const paperRequirements = (firstBook, secondBook, thirdBook) => {
+    return (firstBook) + (secondBook) + (thirdBook);
+}
+console.log(paperRequirements(100, 200, 300));
+
+//Q.4 একটা ফাংশন লিখবে। এই ফাংশনের নাম হবে bestFriend তারপর সেই ফাংশনে ইনপুট প্যারামিটার হিসেবে একটা array নিবে। সেই array এর মধ্যে তোমার সব ফ্রেন্ডের নাম থাকবে। এখন তোমার কাজ হচ্ছে যে ফ্রেন্ড এর নাম সবচেয়ে বড় সেই ফ্রেন্ড এর নাম রিটার্ন করে দেয়া। এই ক্ষেত্রে তুমি নামটা অর্থাৎ ফ্রেন্ডের নাম (স্ট্রিং) রিটার্ন করতে হবে। 
+let friends = ["Habibur", "Masum", "Jahid", "Kamal", "Mahedi"]
+let bestFriend = (friends) => {
+    let largeFriend = 0;
+    friends.forEach((friend, index) => {
+        console.log(friends[index].length);
+        if (friends[index].length > largeFriend) {
+
+            largeFriend = friend;
+            console.log(largeFriend);
+        } 
+        return largeFriend;
+       
+    }) 
+}
+console.log('BestFriend', bestFriend(friends));
