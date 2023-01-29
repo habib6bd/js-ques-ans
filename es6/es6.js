@@ -23,3 +23,24 @@ const firstArrow =(x)=> {
 return x/5;
 }
 console.log(firstArrow(50));
+
+//৬. [ চ্যালেঞ্জিং। গুগলে সার্চ দিয়ে বের করো ] অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো 
+
+const allNumbers = [20, 31, 45, 3, 60, 100, 6, 9];
+const oddNum = allNumbers.filter(number=> number % 2 !== 0)
+console.log('oddNum',oddNum);
+
+const evenNumbers = allNumbers.filter((x)=> {
+return x % 2 === 0;
+})
+console.log('evenNubers',evenNumbers);
+
+//Q.৭. একটা array এর মধ্যে অনেকগুলা অবজেক্ট আছে। সেখানে যেই অবজেক্ট এর price আছে ৫০০০ টেক্কা সেই অবজেক্টকে find দিয়ে বের করো। 
+const bookList = [
+    {title: 'eat that frog', price: 3000},
+    {title: 'eat that', price: 5000},
+    {title: 'eat', price: 300},
+  
+]
+const findBook = bookList.find(book=> book.price === 5000)
+console.log('find book:',findBook);
