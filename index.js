@@ -224,3 +224,4 @@ const sortNum =(Numbers)=> {
 return Numbers.sort((a, b) => a - b);
 }
 console.log(sortNum(rollNumbers));
+
