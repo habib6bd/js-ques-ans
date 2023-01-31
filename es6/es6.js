@@ -24,7 +24,6 @@ return x/5;
 }
 console.log(firstArrow(50));
 
-<<<<<<< HEAD
 //৬. [ চ্যালেঞ্জিং। গুগলে সার্চ দিয়ে বের করো ] অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো 
 
 const allNumbers = [20, 31, 45, 3, 60, 100, 6, 9];
@@ -45,7 +44,6 @@ const bookList = [
 ]
 const findBook = bookList.find(book=> book.price === 5000)
 console.log('find book:',findBook);
-=======
 //৩.২ তুমি দুইটা প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন লিখবে। সেই ফাংশনের ভিতরে কাজ হবে। প্রত্যেকটা ইনপুট প্যারামিটার এর সাথে ২ যোগ করবে তারপর যোগফল দুইটা গুণ করবে। ক্যামনে করবে সেটা চিন্তা করে বের করার চেষ্টা করো 
 
 arrFunction =(num11, num12)=> {
@@ -78,4 +76,23 @@ const multiplyMap =()=> {
     return multiPlyBy5;
 }
 console.log('m', multiplyMap());
->>>>>>> b5a33d6b7fb817916de055b5d9317323bb52d1c2
+
+
+//Q. ৭.৫ [এক্সট্রা] জাভাস্ক্রিপ্ট এ array এর map, forEach, filter, find কোনটা দিয়ে কি হয়। সেটার একটা সামারি লিখে ফেলো। 
+
+//Q. ৮. সিম্পল একটা জাভাস্ক্রিপ্ট অবজেক্ট এর কোন একটা প্রোপার্টিকে ভেরিয়েবল হিসেবে ডিক্লেয়ার করার জন্য destructuring ইউজ করো। 
+
+const studentList = [
+    {Name: 'Habib', Id: 1},
+    {Name: 'Nahid', Id: 2},
+    {Name: 'Shaifan', Id: 3},
+]
+
+const [Name] = studentList;
+console.log('n',Name);
+
+
+const peraMeter=(num18, num19, num20=7) => {
+return num18+num19+num20;
+}
+console.log('pera',peraMeter(5,6));
