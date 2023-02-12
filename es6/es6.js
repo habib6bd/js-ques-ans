@@ -96,3 +96,32 @@ const peraMeter=(num18, num19, num20=7) => {
 return num18+num19+num20;
 }
 console.log('pera',peraMeter(5,6));
+
+//Q. ৯. [চ্যালেঞ্জিং] array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর থার্ড পজিশন এর উপাদান কে destructuring করে 'three' নামক একটা ভেরিয়েবল এ রাখবে। 
+
+var fruits = ['Apple', 'Orange', 'Banana', 'Mango', 'Lemon', 'Water Melon']
+
+const [, , three] = fruits;
+console.log('three',three);
+
+//Q. ১০. তিনটা প্যারামিটার ওয়ালা একটা ফাংশন লিখবে। যেই ফাংশনের কাজ হবে তিনটা প্যারামিটার নিয়ে সেই তিনটা প্যারামিটার এর যোগ করে যোগফল রিটার্ন করবে। আর থার্ড প্যারামিটার এর একটা ডিফল্ট ভ্যালু থাকবে। সেটা হবে ৭। 
+
+let additionFun = (add1, add2, add3 = 7) => {
+return add1 + add2 + add3;
+}
+console.log('additionFun', additionFun(2, 3));
+
+//Q.১১. একটা nested অবজেক্ট ডিক্লেয়ার করো (অর্থাৎ একটা অবজেক্ট এর প্রপার্টি এর মধ্যেও যে অবজেক্ট থাকতে পারে। আবার সেই অবজেক্ট এর প্রপার্টি এর মধ্যেও সে অবজেক্ট থাকতে পারে। সেই রকম একটা অবজেক্ট ডিক্লেয়ার করো। এবং যেকোন একটা প্রপার্টি এর মান একটা array হবে। জাস্ট এমন একটা অবজেক্ট )
+
+let student = {
+    name: 'Habib',
+    Id: 1,
+    Department: 'computer science',
+    Languages: ['Bangla', 'English'],
+    Info: {
+        vehicles: "lumbargini",
+        plane: "Qatar Airlines",
+    }
+}
+
+console.log('plane', student?.Info?.plane);
